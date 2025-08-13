@@ -13,6 +13,7 @@ import About from './collections/AboutUs'
 import Posts from './collections/Posts'
 import LifeAtBMP from './collections/LifeAtBmp'
 import HeroSection from './collections/HeroSection'
+import Services from './collections/Services'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -25,7 +26,7 @@ export default buildConfig({
     },
   },
   cors: ['http://localhost:5173'],
-  collections: [Users, Media, About,Posts,LifeAtBMP,HeroSection],
+  collections: [Users, Media, About,Posts,LifeAtBMP,HeroSection,Services],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
