@@ -19,13 +19,6 @@ import Services from './collections/Services'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
-console.log("env",
-  process.env.R2_BUCKET_NAME,
-  process.env.R2_ENDPOINT,
-  process.env.R2_ACCESS_KEY,
-  process.env.R2_SECRET_ACCESS_KEY,
-)
-
 export default buildConfig({
   admin: {
     user: Users.slug,
