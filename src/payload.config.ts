@@ -26,6 +26,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+  // todo : change the frontend url 
   cors: ["http://localhost:5173"],
   collections: [Users, Media, About, Posts, LifeAtBMP, HeroSection, Services],
   editor: lexicalEditor(),
