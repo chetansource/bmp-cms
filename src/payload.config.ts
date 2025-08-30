@@ -26,8 +26,8 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  // todo : change the frontend url 
-  cors: ["http://localhost:5173"],
+  // todo : change the frontend url
+  cors: ['http://localhost:5173'],
   collections: [Users, Media, About, Posts, LifeAtBMP, HeroSection, Services],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
@@ -47,11 +47,12 @@ export default buildConfig({
       },
       bucket: process.env.R2_BUCKET_NAME || '',
       config: {
-        endpoint: process.env.R2_ENDPOINT,
+        endpoint: process.env.R2_UPLOAD_ENDPOINT,
+        forcePathStyle: true,
         region: 'auto',
         credentials: {
           accessKeyId: process.env.R2_ACCESS_KEY || '',
-          secretAccessKey: process.env.R2_SECRET_ACCESS_KEY||'',
+          secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || '',
         },
       },
     }),
